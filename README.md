@@ -9,7 +9,7 @@ The Hungarian algorithm can be described as optimally solving a workers versus j
 
 A simple example, whose solution is almost immediately obvious follows.
 
-       clean   sweep     wash
+	clean	sweep	wash
 Albert	$2	$3	$3
 
 Betty	$3	$2	$3

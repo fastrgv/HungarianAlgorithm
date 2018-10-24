@@ -1,23 +1,23 @@
 
-#Hungarian Algorithm Implementation in Ada
+# Hungarian Algorithm Implementation in Ada
 
 * Although written in Ada, this code could be considered an algorithmic description.
 
 
-#Problem Description
+# Problem Description
 The Hungarian algorithm can be described as optimally solving a workers versus jobs assignment problem that minimizes total cost.  This implementation assumes a square cost matrix, i.e. the number of jobs equals the number of workers to do them.
 
 A simple example, whose solution is almost immediately obvious follows.
 
-			clean		sweep		wash
-Albert	$2			$3			$3
-Betty		$3			$2			$3
-Carol		$3			$3			$2
+		clean		sweep		wash
+Albert		$2		$3		$3
+Betty		$3		$2		$3
+Carol		$3		$3		$2
 
 The Hungarian method, when applied to the above table would give the minimum cost of $6, by assigning Albert to clean, Betty to sweep, and Carol to wash.
 
 
-#Source
+# Source
 This algorithm was copied on 20sep18 from:
 https://users.cs.duke.edu/~brd/Teaching/
 			Bio/asmb/current/Handouts/munkres.html
@@ -29,7 +29,7 @@ Please send any improvements or further corrections to:
 <fastrgv@gmail.com>
 
 
-##Note
+## Note
 I have recently searched for a correct version online, but found none.  I found several that "almost" worked but were all flawed, mainly, I think, due to the age and nature of the original algorithmic description.  It was invented before computers were widely available, so was described in terms of hand computations, parts of which are quite confusing, possibly due to language ambiguities. [Kuhn, 1955]
 
 

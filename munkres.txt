@@ -1,0 +1,39 @@
+
+copied from:
+
+https://users.cs.duke.edu/~brd
+ /Teaching/Bio/asmb/current/Handouts/munkres.html
+
+on 20sep18
+
+Description:  Hungarian Algorithm
+
+The following 6-step algorithm is a modified form of the original Munkres' Assignment Algorithm (sometimes referred to as the Hungarian Algorithm).  This algorithm describes the manual manipulation of a two-dimensional matrix by starring and priming zeros and by covering and uncovering rows and columns.  This is because, at the time of publication (1957), few people had access to a computer and the algorithm was exercised by hand.
+
+We shall attempt to "put a star" on each element of the cost matrix that will ultimately associate a worker to a job, with exactly 1 star per row, and 1 star per column.
+
+
+    Step 0:  Create an nxm  matrix called the cost matrix in which each element represents the cost of assigning one of n workers to one of m jobs.  Rotate the matrix so that there are at least as many columns as rows and let k=min(n,m).
+
+    Step 1:  For each row of the matrix, find the smallest element and subtract it from every element in its row.  Do the same for each column.  Go to Step 2.
+
+
+We now need to "cover" all zeros with the minimum # "lines".  A line is a row or column identified as containing a particular zero.
+
+
+    Step 2:  Find a zero (Z) in the resulting matrix.  If there is no starred zero in its row or column, star Z. Repeat for each element in the matrix. Go to Step 3.
+
+    Step 3:  Cover each column containing a starred zero.  If K columns are covered, the starred zeros describe a complete set of unique assignments.  In this case, Go to DONE, otherwise, Go to Step 4.
+
+    Step 4:  Find a noncovered zero and prime it.  If there is no starred zero in the row containing this primed zero, Go to Step 5.  Otherwise, cover this row and uncover the column containing the starred zero. Continue in this manner until there are no uncovered zeros left. Save the smallest uncovered value and Go to Step 6.
+
+    Step 5:  Construct a series of alternating primed and starred zeros as follows.  Let Z0 represent the uncovered primed zero found in Step 4.  Let Z1 denote the starred zero in the column of Z0 (if any). Let Z2 denote the primed zero in the row of Z1 (there will always be one).  Continue until the series terminates at a primed zero that has no starred zero in its column.  Unstar each starred zero of the series, star each primed zero of the series, erase all primes and uncover every line in the matrix.  Return to Step 3.
+
+    Step 6:  Add the value found in Step 4 to every element of each covered row, and subtract it from every element of each uncovered column.  Return to Step 4 without altering any stars, primes, or covered lines.
+
+    DONE:  Assignment pairs are indicated by the positions of the starred zeros in the cost matrix.  If C(i,j) is a starred zero, then the element associated with row i is assigned to the element associated with column j.
+
+Some of these descriptions require careful interpretation.  In Step 4, for example, the possible situations are, that there is a noncovered zero which get primed and if there is no starred zero in its row the program goes onto Step 5.  The other possible way out of Step 4 is that there are no noncovered zeros at all, in which case the program goes to Step 6.
+
+At first it may seem that the erratic nature of this algorithm would make its implementation difficult.  However, we can apply a few general rules of programming style to simplify this problem.  The same rules can be applied to any step-algorithm.
+ 

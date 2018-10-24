@@ -17,7 +17,8 @@ B	$3	$2	$3
 
 C	$3	$3	$2
 
-The Hungarian method, when applied to the above table would give the minimum cost of $6, by assigning A to j1, B to j2, and C to j3.
+The Hungarian method, when applied to the above table would give the minimum cost of $6, by assigning A to job 1, B to job 2, and C to job 3.
+
 
 
 # Source

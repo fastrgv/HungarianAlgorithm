@@ -9,7 +9,7 @@ The Hungarian algorithm can be described as optimally solving a workers versus j
 
 A simple example, whose solution is almost immediately obvious follows.
 
-job	1	2	3
+job	#1	#2	#3
 
 A	$2	$3	$3
 

@@ -9,14 +9,14 @@ The Hungarian algorithm can be described as optimally solving a workers versus j
 
 A simple example, whose solution is almost immediately obvious follows.
 
-	clean	sweep	wash
-Albert	$2	$3	$3
+	j1 j2 j3
+A	$2	$3	$3
 
-Betty	$3	$2	$3
+B	$3	$2	$3
 
-Carol	$3	$3	$2
+C	$3	$3	$2
 
-The Hungarian method, when applied to the above table would give the minimum cost of $6, by assigning Albert to clean, Betty to sweep, and Carol to wash.
+The Hungarian method, when applied to the above table would give the minimum cost of $6, by assigning A to j1, B to j2, and C to j3.
 
 
 # Source

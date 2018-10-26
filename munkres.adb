@@ -51,7 +51,7 @@ procedure hungarian(
 	-- cost matrix [C will be overwritten]
 
 
-	path: array(1..2*n,1..2) of integer:=(others=>(others=>0));
+	path: array(1..3*n,1..2) of integer:=(others=>(others=>0));
 
 	M :  array(1..n,1..n) of integer := (others=>(others=>0));
 	-- a mask matrix to indicate primed (= 2) 
@@ -201,22 +201,21 @@ end step3;
     begin
       col:=0;
       i:=row;
-		foundstar:=false;
+      foundstar:=false;
 
         j:=1;
-		  columnloop:
+				columnloop:
         loop
-         --if C(i,j)=0 and M(i,j)=1 then
          if M(i,j)=1 then --only zeros are starred!
-				foundstar:=true;
-				col:=j;
-				exit columnloop;
+	   			foundstar:=true;
+	   			col:=j;
+	   			exit columnloop;
          end if;
-          j:=j+1;
+         j:=j+1;
          exit when j>n;
         end loop columnloop;
 
-		return foundstar;
+			return foundstar;
 
     end found_star_in_row;
 
@@ -229,21 +228,21 @@ end step3;
       col:=0;
       i:=1;
 
-		iloop: --search all rows
+			iloop: --search all rows
       loop
 
         j:=1;
-		  jloop: --search all cols
+	  		jloop: --search all cols
         loop
 
-				if C(i,j)=0 and R_cov(i)=0 and C_cov(j)=0 then --nonCoveredZero
-					row:=i;
-					col:=j;
-					exit iloop;
-				end if;
+					if C(i,j)=0 and R_cov(i)=0 and C_cov(j)=0 then --nonCoveredZero
+						row:=i;
+						col:=j;
+						exit iloop;
+					end if;
 
-				j:=j+1;
-				exit jloop when j>n;
+					j:=j+1;
+					exit jloop when j>n;
 
         end loop jloop;
 
@@ -268,28 +267,27 @@ end step3;
 		iloop: --row
       loop
         j:=1;
-		  jloop: --col
+				jloop: --col
         loop
 				if 
 					C(i,j)<mini  --decreases mini
 				and 
 					R_cov(i)=0 and C_cov(j)=0  --nonCovered
 				then
-					row:=i;
-					col:=j;
-					mini:=C(i,j);
-					found:=true;
-				end if;
-
-				j:=j+1;
-				exit jloop when j>n;
+						row:=i;
+						col:=j;
+						mini:=C(i,j);
+						found:=true;
+					end if;
+					j:=j+1;
+					exit jloop when j>n;
         end loop jloop;
 
         i:=i+1;
-		  exit iloop when i>n;
+	  		exit iloop when i>n;
       end loop iloop;
 
-		return found;
+			return found;
 
     end foundMinUncovered;
 

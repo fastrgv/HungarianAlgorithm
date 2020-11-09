@@ -3,7 +3,6 @@
 
 * Although written in Ada, this code could be considered an algorithmic description.
 
-
 # Problem Description
 The Hungarian algorithm can be described as optimally solving a workers versus jobs assignment problem that minimizes total cost.  This implementation assumes a square cost matrix, i.e. the number of jobs equals the number of workers to do them.
 
@@ -19,13 +18,16 @@ C	$3	$3	$2
 
 The Hungarian method, when applied to the above table would give the minimum cost of $6, by assigning A to job 1, B to job 2, and C to job 3.
 
+# Example
 
+munktest.adb 
+solves an 11 x 11 (hardcoded) job assignment problem.
+To compile it, type lcmp.sh on linux, ocmp.sh on OSX, or wcmp.bat on Windows.
 
 # Source
 This algorithm was copied on 20sep18 from:
-
-https://users.cs.duke.edu/~brd/Teaching/Bio/asmb/current/Handouts/munkres.html
-
+https://users.cs.duke.edu/~brd/Teaching/
+			Bio/asmb/current/Handouts/munkres.html
 and modified to correct some errors.  
 
 It is currently being used as an integral part of a sokoban solver that is being developed.  Thusly, it has now been tested on thousands of actual testcases and seems to be working properly.  
@@ -35,10 +37,10 @@ Please send any improvements or further corrections to:
 
 
 ## Note
-I have recently searched for a correct version online, but found none.  I found several that "almost" worked but were all flawed, mainly, I think, due to the age and nature of the original algorithmic description.  It was invented before computers were widely available, so was described in terms of hand computations, parts of which are quite confusing, possibly due to language ambiguities. [Kuhn, 1955]
+I have searched for a correct version online, but found none.  I found several that "almost" worked but were all flawed, mainly, I think, due to the age and nature of the original algorithmic description.  It was invented before computers were widely available, so was described in terms of hand computations, parts of which are quite confusing, possibly due to language ambiguities. [Kuhn, 1955]
 
 
-## Legal Mumbo Jumbo:
+## License
 
  Copyright (C) 2018  <fastrgv@gmail.com>
 
@@ -54,4 +56,5 @@ I have recently searched for a correct version online, but found none.  I found 
 
  You may read the full text of the GNU General Public License
  at <http://www.gnu.org/licenses/>.
+
 

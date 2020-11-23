@@ -30,8 +30,7 @@ To compile it, type lcmp.sh on linux, ocmp.sh on OSX, or wcmp.bat on Windows.
 
 # Source
 This algorithm was copied on 20sep18 from:
-https://users.cs.duke.edu/~brd/Teaching/
-			Bio/asmb/current/Handouts/munkres.html
+https://users.cs.duke.edu/~brd/Teaching/Bio/asmb/current/Handouts/munkres.html
 and modified to correct some errors.  
 
 It is currently being used as an integral part of a sokoban solver that is being developed.  Thusly, it has now been tested on thousands of actual testcases and seems to be working properly.  

@@ -43,6 +43,10 @@ Please send any improvements or further corrections to:
 I have searched for a correct version online, but found none.  I found several that "almost" worked but were all flawed, mainly, I think, due to the age and nature of the original algorithmic description.  It was invented before computers were widely available, so was described in terms of hand computations, parts of which are quite confusing, possibly due to language ambiguities. [Kuhn, 1955]
 
 
+## See Also
+I now have another project titled "hbox4", which is a sokoban puzzle solver that makes heavy use of the Hungarian Algorithm. It demonstrates its remarkable power because without it, the solver becomes severely disabled.
+
+
 ## License
 
  Copyright (C) 2018  <fastrgv@gmail.com>

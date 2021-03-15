@@ -10,6 +10,9 @@ https://github.com/fastrgv/HungarianAlgorithm/releases/download/v1.0.0/hu9nov20.
 
 * Although written in Ada, this code could be considered an algorithmic description.
 
+The proper command to extract the archive and maintain the directory structure is "7z x filename".
+
+
 # Problem Description
 The Hungarian algorithm can be described as optimally solving a workers versus jobs assignment problem that minimizes total cost.  This implementation assumes a square cost matrix, i.e. the number of jobs equals the number of workers to do them.
 

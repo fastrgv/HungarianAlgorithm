@@ -46,7 +46,12 @@ This algorithm was copied on 20sep18 from:
 https://users.cs.duke.edu/~brd/Teaching/Bio/asmb/current/Handouts/munkres.html
 and modified to correct some errors.  
 
-It is currently being used as an integral part of a sokoban solver that is being developed.  Thusly, it has now been tested on thousands of actual testcases and seems to be working properly.  
+It is currently being used as an integral part of a highly capable sokoban solver [hbox4] that has been developed.  Thusly, it has now been tested on thousands of actual testcases and seems to be working properly.
+
+Here are the links to the sokoban solver:
+	* https://sourceforge.net/projects/hbox4/files/8nov2022/
+	* https://github.com/fastrgv/hbox4
+
 
 Please send any improvements or further corrections to:
 <fastrgv@gmail.com>

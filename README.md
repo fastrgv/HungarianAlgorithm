@@ -49,6 +49,7 @@ and modified to correct some errors.
 It is currently being used as an integral part of a highly capable sokoban solver [hbox4] that has been developed.  Thusly, it has now been tested on thousands of actual testcases and seems to be working properly.
 
 Here are the links to the sokoban solver:
+
 	* https://sourceforge.net/projects/hbox4/files/8nov2022/
 	* https://github.com/fastrgv/hbox4
 

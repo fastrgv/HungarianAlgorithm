@@ -1,0 +1,39 @@
+
+11 by 11 job cost matrix...
+
+horizontal: 11 different jobs
+vertical:   11 different workers
+(w,j)=x => worker w cannot do job j
+
+Here is the problem hardcoded into example
+in "munktest.adb":
+
+ 0, 2, 3, 3, x, 4, 5, 5, 6, 6, x,
+ 2, 0, 3, 1, x, 2, 5, 3, 6, 4, x,
+ 3, 1, 4, 2, 1, 3, 6, 4, 7, 5, x,
+ x, x, 2, 4, x, 5, 6, 6, 7, 7, x,
+ x, x, 1, 3, x, 4, 5, 5, 6, 6, x,
+ x, x, 3, 1, 0, 2, 5, 3, 6, 4, x,
+ x, x, 2, 4, x, 5, 6, 6, 7, 7, x,
+ x, x, 3, 1, x, 0, 3, 1, 4, 2, x,
+ x, x, 4, 2, 1, 1, 4, 2, 5, 3, x,
+ x, x, 8, 8, x, 7, 6, 6, 3, 5, 4,
+ x, x, 7, 7, x, 6, 5, 5, 2, 4, 3
+
+
+Best answer:
+worker	job		cost
+	1		1			0
+	2		6			2
+	3		2			1
+	4		7			6
+	5		4			3
+	6		5			0
+	7		3			2
+	8		10			2
+	9		8			2
+	10		11			4
+	11		9			2
+==========================
+						24 total cost
+
